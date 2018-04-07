@@ -1,0 +1,15 @@
+version: '3'
+services:
+  kibana:
+    image: ci-tool-stack/kibana:${VERSION:-latest}
+    environment:
+      - SERVER_NAME=kibana_test
+      - ELASTICSEARCH_URL=http://localhost
+#     volumes:
+#      - ./kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - 5601:5601
+    networks:
+      - esnet
+networks:
+  esnet:
