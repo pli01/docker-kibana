@@ -1,0 +1,3 @@
+#
+PACKAGENAME ?= docker-kibana
+IMAGE_NAME ?= ci-tool-stack/kibana
